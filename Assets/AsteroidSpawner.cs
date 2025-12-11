@@ -32,6 +32,6 @@ public class AsteroidSpawner : MonoBehaviour
 
         Vector3 spawnPos = new Vector3(randomX, randomY, zDist);
 
-        Instantiate(asteroidPrefab, spawnPos, Quaternion.identity);
+        Instantiate(asteroidPrefab, spawnPos, Random.rotation);
     }
 }

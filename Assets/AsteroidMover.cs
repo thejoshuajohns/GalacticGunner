@@ -19,4 +19,13 @@ public class AsteroidMover : MonoBehaviour
             rb.angularVelocity = Random.insideUnitSphere * 2f;
         }
     }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            GameManager.Instance.LoseLife();
+
+            Destroy(gameObject);
+        }
+    }
 }

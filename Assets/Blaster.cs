@@ -48,7 +48,7 @@ public class Blaster : MonoBehaviour
 
             if (hit.transform.CompareTag("Asteroid"))
             {
-                Debug.Log("Asteroid Hit!");
+                GameManager.Instance.AddScore(10);
 
                 Destroy(hit.transform.gameObject);
             }
